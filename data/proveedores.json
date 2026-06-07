@@ -1,0 +1,41 @@
+{
+  "proveedores": [
+    {
+      "id": "pr-001",
+      "nombre": "Cloudflare Inc.",
+      "inn": null,
+      "email": "billing@cloudflare.com",
+      "servicio": "CDN y DNS",
+      "montoMensual": 200.00,
+      "moneda": "USD"
+    },
+    {
+      "id": "pr-002",
+      "nombre": "Vercel Inc.",
+      "inn": null,
+      "email": "billing@vercel.com",
+      "servicio": "Hosting y deploy",
+      "montoMensual": 150.00,
+      "moneda": "USD"
+    },
+    {
+      "id": "pr-003",
+      "nombre": "ООО «Хостинг-Провайдер»",
+      "inn": "7734123456",
+      "kpp": "773401001",
+      "email": "billing@hosting-pro.ru",
+      "servicio": "VPS y servidores",
+      "montoMensual": 45000.00,
+      "moneda": "RUB"
+    },
+    {
+      "id": "pr-004",
+      "nombre": "ИП Кузнецов Д.М.",
+      "inn": "771523456789",
+      "email": "kuznetsov@example.com",
+      "servicio": "Разработка (фриланс)",
+      "tarifaHora": 3000.00,
+      "moneda": "RUB"
+    }
+  ]
+}

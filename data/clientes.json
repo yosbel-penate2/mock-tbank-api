@@ -1,0 +1,33 @@
+{
+  "clientes": [
+    {
+      "id": "cl-001",
+      "nombre": "ООО «ТехноПартнер»",
+      "inn": "7709123456",
+      "kpp": "770901001",
+      "email": "billing@technopartner.ru",
+      "contrato": "Договор №ТП-2024/01 от 01.03.2024",
+      "producto": "Suscripción SaaS anual",
+      "montoMensual": 150000.00
+    },
+    {
+      "id": "cl-002",
+      "nombre": "ИП Смирнов А.В.",
+      "inn": "772812345678",
+      "email": "smirnov@example.com",
+      "contrato": "Договор №ИП-2024/05 от 15.05.2024",
+      "producto": "Suscripción SaaS mensual",
+      "montoMensual": 25000.00
+    },
+    {
+      "id": "cl-003",
+      "nombre": "АО «Цифровые Решения»",
+      "inn": "7715987654",
+      "kpp": "771501001",
+      "email": "finance@digitalsol.ru",
+      "contrato": "Договор №ЦР-2024/08 от 01.08.2024",
+      "producto": "Разработка ПО (разовый проект)",
+      "montoTotal": 1200000.00
+    }
+  ]
+}

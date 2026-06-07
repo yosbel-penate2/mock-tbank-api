@@ -1,0 +1,48 @@
+{
+  "cuentas": [
+    {
+      "id": "account-rub-main",
+      "nombre": "Расчетный счет RUB",
+      "numero": "40702810123450000001",
+      "moneda": "RUB",
+      "banco": "АО «Т-Банк»",
+      "bic": "044525974",
+      "tipo": "settlement",
+      "saldoInicial": 1500000.00,
+      "descripcion": "Cuenta corriente principal en rublos"
+    },
+    {
+      "id": "account-rub-reserve",
+      "nombre": "Резервный счет RUB",
+      "numero": "40702810123450000002",
+      "moneda": "RUB",
+      "banco": "АО «Т-Банк»",
+      "bic": "044525974",
+      "tipo": "settlement",
+      "saldoInicial": 500000.00,
+      "descripcion": "Cuenta de reserva para impuestos y emergencias"
+    },
+    {
+      "id": "account-usd-savings",
+      "nombre": "Валютный счет USD",
+      "numero": "40802840700000000001",
+      "moneda": "USD",
+      "banco": "АО «Т-Банк»",
+      "bic": "044525974",
+      "tipo": "settlement",
+      "saldoInicial": 25000.00,
+      "descripcion": "Cuenta en USD para pagos internacionales"
+    },
+    {
+      "id": "account-investment",
+      "nombre": "Инвестиционный счет",
+      "numero": "40701810600000000001",
+      "moneda": "RUB",
+      "banco": "АО «Т-Банк»",
+      "bic": "044525974",
+      "tipo": "investment",
+      "saldoInicial": 300000.00,
+      "descripcion": "Cuenta de inversión (DCA en ETFs)"
+    }
+  ]
+}

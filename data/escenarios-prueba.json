@@ -1,0 +1,95 @@
+{
+  "escenarios": [
+    {
+      "id": "test-01",
+      "descripcion": "Consultar datos de la empresa",
+      "herramienta": "tbank_get_company_info",
+      "params": {}
+    },
+    {
+      "id": "test-02",
+      "descripcion": "Listar cuentas bancarias",
+      "herramienta": "tbank_list_accounts",
+      "params": {}
+    },
+    {
+      "id": "test-03",
+      "descripcion": "Ver requisitos bancarios",
+      "herramienta": "tbank_get_company_requisites",
+      "params": {}
+    },
+    {
+      "id": "test-04",
+      "descripcion": "Consultar saldo de cuenta principal",
+      "herramienta": "tbank_get_account_balance",
+      "params": {
+        "accountId": "account-rub-main"
+      }
+    },
+    {
+      "id": "test-05",
+      "descripcion": "Generar extracto bancario (últimos 30 días)",
+      "herramienta": "tbank_get_account_statement",
+      "params": {
+        "accountId": "account-rub-main",
+        "from": "2026-05-08",
+        "to": "2026-06-08"
+      }
+    },
+    {
+      "id": "test-06",
+      "descripcion": "Listar pagos emitidos",
+      "herramienta": "tbank_list_payments",
+      "params": {}
+    },
+    {
+      "id": "test-07",
+      "descripcion": "Listar facturas emitidas",
+      "herramienta": "tbank_list_invoices",
+      "params": {}
+    },
+    {
+      "id": "test-08",
+      "descripcion": "Crear pago a proveedor (prueba)",
+      "herramienta": "tbank_create_payment",
+      "params": {
+        "accountId": "account-rub-main",
+        "amount": 45000.00,
+        "beneficiaryName": "ООО «Хостинг-Провайдер»",
+        "beneficiaryInn": "7734123456",
+        "beneficiaryAccount": "40702810900000000001",
+        "beneficiaryBic": "044525593",
+        "paymentPurpose": "Оплата хостинга за июнь 2026",
+        "vatType": "none"
+      }
+    },
+    {
+      "id": "test-09",
+      "descripcion": "Crear factura (счёт) a cliente",
+      "herramienta": "tbank_create_invoice",
+      "params": {
+        "counterpartyName": "ООО «ТехноПартнер»",
+        "counterpartyInn": "7709123456",
+        "counterpartyEmail": "billing@technopartner.ru",
+        "vatRate": "none",
+        "items": [
+          {
+            "name": "Подписка SaaS (годовая) — июнь 2026",
+            "quantity": 1,
+            "unitPrice": 150000.00
+          }
+        ]
+      }
+    },
+    {
+      "id": "test-10",
+      "descripcion": "Crear enlace de pago SBP",
+      "herramienta": "tbank_create_sbp_invoice_link",
+      "params": {
+        "accountId": "account-rub-main",
+        "amount": 25000.00,
+        "description": "Оплата подписки SaaS по счёту №СЧ-2024/06"
+      }
+    }
+  ]
+}

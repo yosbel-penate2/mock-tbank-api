@@ -1,0 +1,82 @@
+{
+  "planDeCuentas": [
+    {
+      "codigo": "70",
+      "nombre": "Выручка",
+      "tipo": "income",
+      "subcuentas": [
+        {"codigo": "70.01", "nombre": "Подписки (SaaS)", "tipo": "income"},
+        {"codigo": "70.02", "nombre": "Разовые услуги", "tipo": "income"}
+      ]
+    },
+    {
+      "codigo": "90",
+      "nombre": "Себестоимость (COGS)",
+      "tipo": "expense",
+      "subcuentas": [
+        {"codigo": "90.01", "nombre": "Хостинг и инфраструктура", "tipo": "expense"},
+        {"codigo": "90.02", "nombre": "Комиссии платежных систем", "tipo": "expense"},
+        {"codigo": "90.03", "nombre": "Сторонние API", "tipo": "expense"}
+      ]
+    },
+    {
+      "codigo": "91",
+      "nombre": "Операционные расходы",
+      "tipo": "expense",
+      "subcuentas": [
+        {"codigo": "91.01", "nombre": "ПО и инструменты", "tipo": "expense"},
+        {"codigo": "91.02", "nombre": "Маркетинг и реклама", "tipo": "expense"},
+        {"codigo": "91.03", "nombre": "Подрядчики и фрилансеры", "tipo": "expense"},
+        {"codigo": "91.04", "nombre": "Юридические услуги", "tipo": "expense"},
+        {"codigo": "91.05", "nombre": "Офис и оборудование", "tipo": "expense"},
+        {"codigo": "91.06", "nombre": "Прочее", "tipo": "expense"}
+      ]
+    },
+    {
+      "codigo": "51",
+      "nombre": "Расчетный счет",
+      "tipo": "asset"
+    },
+    {
+      "codigo": "60",
+      "nombre": "Расчеты с поставщиками",
+      "tipo": "liability",
+      "subcuentas": [
+        {"codigo": "60.01", "nombre": "Поставщики (услуги)", "tipo": "liability"},
+        {"codigo": "60.02", "nombre": "Поставщики (ПО)", "tipo": "liability"}
+      ]
+    },
+    {
+      "codigo": "62",
+      "nombre": "Расчеты с покупателями",
+      "tipo": "asset",
+      "subcuentas": [
+        {"codigo": "62.01", "nombre": "Дебиторская задолженность", "tipo": "asset"},
+        {"codigo": "62.02", "nombre": "Доходы будущих периодов", "tipo": "liability"}
+      ]
+    },
+    {
+      "codigo": "68",
+      "nombre": "Налоги",
+      "tipo": "liability",
+      "subcuentas": [
+        {"codigo": "68.01", "nombre": "НДФЛ", "tipo": "liability"},
+        {"codigo": "68.02", "nombre": "Налог УСН", "tipo": "liability"}
+      ]
+    },
+    {
+      "codigo": "69",
+      "nombre": "Страховые взносы",
+      "tipo": "liability"
+    },
+    {
+      "codigo": "75",
+      "nombre": "Расчеты с учредителями",
+      "tipo": "equity",
+      "subcuentas": [
+        {"codigo": "75.01", "nombre": "Взносы учредителя", "tipo": "equity"},
+        {"codigo": "75.02", "nombre": "Дивиденды", "tipo": "equity"}
+      ]
+    }
+  ]
+}

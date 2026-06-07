@@ -1,0 +1,25 @@
+{
+  "nombre": "ООО «Тестовая Компания»",
+  "nombreCorto": "Тестовая Компания",
+  "tipo": "OOO",
+  "inn": "7728123456",
+  "kpp": "772801001",
+  "ogrn": "1187746000001",
+  "direccionLegal": "115035, г. Москва, ул. Садовническая, д. 82, стр. 2, офис 401",
+  "direccionPostal": "115035, г. Москва, ул. Садовническая, д. 82, стр. 2, офис 401",
+  "telefono": "+7 (495) 123-45-67",
+  "email": "info@test-company.ru",
+  "sitioWeb": "https://test-company.ru",
+  "regimenFiscal": "USN (6%)",
+  "fechaRegistro": "2024-01-15",
+  "monedaBase": "RUB",
+  "director": "Иванов Иван Иванович",
+  "actividadPrincipal": "Разработка программного обеспечения",
+  "codigoOKVED": "62.01",
+  "datosBanco": {
+    "banco": "АО «Т-Банк»",
+    "bic": "044525974",
+    "cuentaCorriente": "40702810123450000001",
+    "cuentaCorresponsal": "30101810145250000974"
+  }
+}
