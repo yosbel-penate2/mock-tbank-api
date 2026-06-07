@@ -27,25 +27,24 @@ TBANK_TOKEN=mock-token-any-value
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────┐
-│  AI Agent / MCP Client                              │
-│  (opencode, Claude, etc.)                           │
-└──────────────┬──────────────────────────────────────┘
-               │ tools (get_company_info, create_payment, …)
-               ▼
-┌─────────────────────────────────────────────────────┐
-│  tbank-mcp (real) — stdio MCP server                │
-│  src/tbank_mcp/                                     │
-│  Reads TBANK_BASE_URL + TBANK_TOKEN from env        │
-└──────────────┬──────────────────────────────────────┘
-               │ HTTP REST (Bearer auth)
-               ▼
-┌─────────────────────────────────────────────────────┐
-│  Mock T-Bank API  ←  YOU ARE HERE                   │
-│  mock_tbank_api.py  (FastAPI on 127.0.0.1:8099)     │
-│  Data loaded from data/*.json                        │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    Agent["AI Agent / MCP Client<br/><i>opencode, Claude, etc.</i>"]
+    MCP["tbank-mcp (real)<br/><i>stdio MCP server</i><br/>reads TBANK_BASE_URL + TBANK_TOKEN"]
+    Mock["Mock T-Bank API<br/><i>mock_tbank_api.py</i><br/>FastAPI on :8099"]
+    Data["data/*.json<br/><i>company, accounts,<br/>clients, suppliers</i>"]
+    Prod["T-Bank Production<br/><i>secured-openapi.tbank.ru</i>"]
+
+    Agent -- "tools (get_company_info, create_payment, ...)" --> MCP
+    MCP -- "HTTP REST (Bearer auth)" --> Mock
+    Mock -- "loads config" --> Data
+    MCP -. "switch via TBANK_BASE_URL" .-> Prod
+
+    style Mock fill:#1a73e8,color:#fff
+    style Data fill:#34a853,color:#fff
+    style MCP fill:#ea4335,color:#fff
+    style Agent fill:#fbbc04
+    style Prod fill:#999,color:#fff,stroke-dasharray: 5 5
 ```
 
 **Key insight:** The real `tbank-mcp` already supports `TBANK_BASE_URL` override
