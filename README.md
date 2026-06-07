@@ -29,16 +29,16 @@ TBANK_TOKEN=mock-token-any-value
 
 ```mermaid
 flowchart TB
-    Agent["AI Agent / MCP Client<br/><i>opencode, Claude, etc.</i>"]
-    MCP["tbank-mcp (real)<br/><i>stdio MCP server</i><br/>reads TBANK_BASE_URL + TBANK_TOKEN"]
-    Mock["Mock T-Bank API<br/><i>mock_tbank_api.py</i><br/>FastAPI on :8099"]
-    Data["data/*.json<br/><i>company, accounts,<br/>clients, suppliers</i>"]
-    Prod["T-Bank Production<br/><i>secured-openapi.tbank.ru</i>"]
+    Agent["AI Agent / MCP Client<br/>(opencode, Claude, etc.)"]
+    MCP["tbank-mcp (real)<br/>stdio MCP server<br/>reads TBANK_BASE_URL + TBANK_TOKEN"]
+    Mock["Mock T-Bank API<br/>mock_tbank_api.py<br/>FastAPI on :8099"]
+    Data["data/*.json<br/>company, accounts, clients, suppliers"]
+    Prod["T-Bank Production<br/>secured-openapi.tbank.ru"]
 
-    Agent -- "tools (get_company_info, create_payment, ...)" --> MCP
-    MCP -- "HTTP REST (Bearer auth)" --> Mock
-    Mock -- "loads config" --> Data
-    MCP -. "switch via TBANK_BASE_URL" .-> Prod
+    Agent -->|tools: get_company_info, create_payment, ...| MCP
+    MCP -->|HTTP REST - Bearer auth| Mock
+    Mock -->|loads config| Data
+    MCP -.->|switch via TBANK_BASE_URL| Prod
 
     style Mock fill:#1a73e8,color:#fff
     style Data fill:#34a853,color:#fff
